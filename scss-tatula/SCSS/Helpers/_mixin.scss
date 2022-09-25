@@ -1,0 +1,37 @@
+// Button
+@mixin buttonViolet($color, $bg-color, $font-size, $font-Weight) {
+	color: $color;
+	background-color: $bg-color;
+	font-size: $font-size;
+	font-weight: $font-Weight;
+}
+
+
+// Title
+@mixin title($color, $fontSize, $font-Weight) {
+	color: $color;
+	font-size: $fontSize;
+	font-weight: $font-Weight;
+}
+
+// Background
+@mixin background($width, $height, $absolute, $top, $left) {
+	width: $width;
+	height: $height;
+	position: $absolute;
+	top: $top;
+	left: $left;
+}
+
+// Responsive
+@mixin responsive($screen) {
+	@if (map-has-key($map: $breakpoints, $key: $screen)) {
+		$value: map-get(
+			$map: $breakpoints,
+			$key: $screen
+		);
+		@media screen and (max-width: $value) {
+			@content;
+		}
+	} 
+}

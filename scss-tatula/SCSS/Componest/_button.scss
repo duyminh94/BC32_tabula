@@ -1,0 +1,18 @@
+/* Button */
+.btn {
+	@include buttonViolet($color-white, $color-white, $fs-3, $fw-1);
+	box-shadow: 0 0 0 3em $color-violet inset;
+    margin: 0 10px;
+	padding: 0px 20px;
+    outline: none;
+	border: 1px solid transparent;
+	border-radius: 50px;
+    transition: all .3s ease;
+	&:hover {
+		color: $color-violet;
+        border: 1px solid $color-violet;
+		box-shadow: 0 0 0 0.1em $color-violet inset;
+	}
+}
+
+
